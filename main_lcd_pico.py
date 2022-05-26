@@ -1,3 +1,7 @@
+#This file is the stand alone code to run the LCD
+#This is already incorperated into the main.py
+#This MUST HAVE 'lcd_pico' on the pico as well
+
 from lcd_pico import *
 setupLCD()
 displayString(1,0,"WELCOME")
