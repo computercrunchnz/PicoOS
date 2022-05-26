@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+## this version of Thonny-IDE is recommended by Computer Crunch for use with our software
 set -e
 
 VERSION=3.3.13
