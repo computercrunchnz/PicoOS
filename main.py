@@ -26,7 +26,7 @@ time.sleep(0.10)
 
 print("Welcome to PicoOS 1!")
 print("Currently under development.")
-print("Report any issues to computercrunchnz+picoos1@gmail.com")
+print("Report any issues to our Github page")
 
 namefile = open("name.txt", "r")
 name = namefile.read()
@@ -40,7 +40,7 @@ while True:
         print("PicoOS 1.0 Beta 1")
         print("Made by Crunch Media Group Software")
         print("This PicoPC belongs to " + name + ".")
-        print("Report any issues to computercrunchnz+picoos1@gmail.com")
+        print("Report any issues to our Girhub page")
     elif cmd == "update":
         print("Update")
         print("To check for updates, go to the PicoOS git repository at https://github.com/computercrunchnz/PicoOS/releases.")
