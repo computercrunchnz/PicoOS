@@ -1,6 +1,3 @@
-#this script is exclusive to the personal version of PicoOS, 
-#make sure lights are plugged into the Pico AND ALWAYS USE A RESISTOR 
-#GP13 (white), GP9 (white2), GP5 (red), GP1 (green), GP18 (blue), GP22 (yellow), GP25 (green2)
 from machine import Pin, Timer
 import _thread
 import sys
@@ -8,9 +5,7 @@ import time
 
 run = False
 
-print("Welcome to PicoOS SmartLight")
-print("GP13 (white), GP9 (white2), GP5 (red), GP1 (green), GP18 (blue), GP22 (yellow), GP25 (green2)")
-print("ALWAYS USE RESISTORS")
+print("Welcome to CC SmartLight")
 
 white1 = Pin(13, Pin.OUT) 
 white2 = Pin(9, Pin.OUT)

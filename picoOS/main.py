@@ -26,7 +26,7 @@ time.sleep(0.10)
 
 print("Welcome to PicoOS 1!")
 print("Currently under development.")
-print("Report any issues to our Github page")
+print("Report any issues to computercrunchnz+picoos1@gmail.com")
 
 namefile = open("name.txt", "r")
 name = namefile.read()
@@ -37,13 +37,13 @@ while True:
     print()
     if cmd == "about":
         print("About")
-        print("PicoOS 1.0 Beta 1")
+        print("PicoOS 1.0 Dev 7")
         print("Made by Crunch Media Group Software")
         print("This PicoPC belongs to " + name + ".")
-        print("Report any issues to our Girhub page")
+        print("Report any issues to computercrunchnz+picoos1@gmail.com")
     elif cmd == "update":
         print("Update")
-        print("To check for updates, go to the PicoOS git repository at https://github.com/computercrunchnz/PicoOS/releases.")
+        print("To get the latest version, go to the PicoOS git repository at https://github.com/computercrunchnz/PicoOS.")
     elif cmd == "calculator":
         print("Calculator")
         calc = 1
@@ -151,6 +151,9 @@ while True:
         print("'random-sentence' - A random sentence generator")
         print("'temp' - Check the temperature in celcius")
         print("'smartlight' - Enter SmartLight Mode - ONLY ENTER IF THIS IS A SMARTLIGHT!")
+        print("'clicker' - Cookie Clicker")
+        print("'marketshare' - OS Market Share")
+        print("'quiz' - News Quiz")
         print("'ls' - Lists the files")
         print("'del' - Delete a file")
         print("'setup' - Setup PicoOS")
@@ -159,6 +162,18 @@ while True:
         hs = input("Do you need commands for in an app? ")
         if hs == "no":
             print("Okay")
+        elif hs == "marketshare":
+            print("Market Share Help")
+            print("SECTORS:")
+            print("'desktop' - Desktop OS Market Share")
+            print("'tablet' - Tablet OS Market Share")
+            print("'mobile' - Mobile OS Market Share")
+        elif hs == "clicker":
+            print("Cookie Clicker Help")
+            print("COMMANDS:")
+            print("'Enter Key' - Click 1 cookie.")
+            print("'cookies' - Number of cookies.")
+            print("'exit' - Exit Cookie Clicker.")
         elif hs == "smartlight":
             print("SmartLight Help")
             print("COMMANDS:")
@@ -554,6 +569,70 @@ while True:
         import setup
     elif cmd == "smartlight":
         import smartlight
+    elif cmd == "clicker":
+        click = 1
+        cookies = 0
+        print("Welcome to Cookie Clicker! Press enter to click cookies.")
+        while click == 1:
+            clickput = input("Cookie: ")
+            if clickput == "exit":
+                click = 0
+                print("Goodbye")
+                print("No. of cookies: " + str(cookies) + ".")
+            elif clickput == "cookies":
+                print("No. of cookies: " + str(cookies) + ".")
+            elif clickput == "":
+                print("COOKIE!")
+                cookies = cookies+1
+    elif cmd == "quiz":
+        print("Welcome to News Quiz!")
+        questions = ("What does WWDC stand for?", "How old is the queen?", "Who is the founder of amazon?", "Y/N: Does the EU want a common charger on all phones?", "What does CPU stand for")
+        answers = ("World Wide Developers Conference", "96", "Jeff Bezos", "Y", "Central Processing Unit")
+        quizq = 0
+        quizs = 0
+        while quizq < len(questions):
+            print(questions[quizq])
+            answer = input("Answer: ")
+            if answer == answers[quizq]:
+                quizs = quizs+1
+                print("You got it correct! The answer is " + answers[quizq])
+            else:
+                print("Wrong. The correct answer is " + answers[quizq])
+            quizq = quizq+1
+        print("Score: " + str(quizs) + " out of " + str(len(questions)) + ".")
+    
+    elif cmd == "marketshare":
+        print("Welcome to Market Share!")
+        print("Latest as of 11/6/2022.")
+        markets = input("Sector: ")
+        if sector == "desktop":
+            print("Desktop OS Market Share")
+            print("Windows: 75.54%")
+            print("macOS: 14.98%")
+            print("Unknown: 4.81%")
+            print("Linux: 2.45%")
+            print("ChromeOS: 2.22%")
+            print("FreeBSD: 0.01%")
+        elif sector == "tablet":
+            print("Tablet OS Market Share")
+            print("iPadOS: 53.63%")
+            print("Android: 46.3%")
+            print("Windows: 0.03%")
+            print("Linux: 0.02%")
+            print("Unknown: 0.01%")
+            print("Blackberry OS: 0.01%")
+        elif sector == "mobile":
+            print("Mobile OS Market Share")
+            print("Android: 71.45%")
+            print("iOS: 27.83%")
+            print("Samsung: 0.41%")
+            print("KaiOS: 0.12%")
+            print("Unknown: 0.12%")
+            print("Nokia Unknown: 0.01%")
+        elif sector == "pico":
+            print("Raspberry Pi Pico OS Market Share")
+            print("CMG PicoOS: 100%")
+        
     
     #INSERT APP HERE
     
