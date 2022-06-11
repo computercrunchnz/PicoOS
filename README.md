@@ -24,3 +24,6 @@ If you have any questions, please contact us at computercrunchnz+picoos1@gmail.c
 
 # Credit
 Software written by @ComputerCrunch and @STESROS6309wastaken.
+
+# All Builds
+All of the PicoOS builds are located in Releases.
