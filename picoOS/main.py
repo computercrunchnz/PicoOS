@@ -37,7 +37,7 @@ while True:
     print()
     if cmd == "about":
         print("About")
-        print("PicoOS 1.0 Dev 7")
+        print("PicoOS 1.0 Dev 8")
         print("Made by Crunch Media Group Software")
         print("This PicoPC belongs to " + name + ".")
         print("Report any issues to computercrunchnz+picoos1@gmail.com")
@@ -604,7 +604,7 @@ while True:
     elif cmd == "marketshare":
         print("Welcome to Market Share!")
         print("Latest as of 11/6/2022.")
-        markets = input("Sector: ")
+        sector = input("Sector: ")
         if sector == "desktop":
             print("Desktop OS Market Share")
             print("Windows: 75.54%")
