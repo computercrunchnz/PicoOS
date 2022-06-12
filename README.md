@@ -12,7 +12,7 @@ Boards with the RP2040 processor and Micropython.
 5) At the Right-Hand side on the bottom there should be a line saying what interprepter you are in.
 6) Click that and choose MicroPython Raspberry Pi Pico.
 7) If you don't have MicroPython installed on your Pico or RP2040 board, Thonny will ask if you want to install MicroPython. Click install and it may take a few minutes to install MicroPython.
-8) Now open **main.py, setup.py, name.txt and smartlight.py** and **save it to the Pico or RP2040 board**.
+8) Now open **main.py, setup.py, name.txt and smartlight.py** from the git folder and **save it to the Pico or RP2040 board**.
 9) Once that is done run main.py.
 10) Type in the ```setup``` command in PicoOS to change the name of the Pico or RP2040 board.
 11) Type in the ```help``` command for a list of all commands.
@@ -28,6 +28,16 @@ Boards with the RP2040 processor and Micropython.
 8) You are now in the PicoOS CLI!
 9) Type in the ```help``` command for a list of all commands.
 10) To exit, type ```exit``` into PicoOS then confirm exit by typing ```Y```, then press ```control-x``` and finally press ```control-d``` to get back to the Linux terminal.
+
+# Update PicoOS
+1) Connect the Pico or RP2040 board to your computer.
+2) Clone this Repository ```git clone https://github.com/computercrunchnz/PicoOS.git``` (example for Linux). 
+3) Enter Thonny.
+5) At the Right-Hand side on the bottom there should be a line saying what interprepter you are in.
+6) Now open **main.py, setup.py, name.txt and smartlight.py** from the git folder and **save it to the Pico or RP2040 board**.
+7) Once that is done run main.py.
+10) Type in the ```setup``` command in PicoOS to change the name of the Pico or RP2040 board.
+11) Type in the ```help``` command for a list of all commands.
 
 
 # Help
