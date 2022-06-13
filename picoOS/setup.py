@@ -6,4 +6,11 @@ namefile.write(name)
 
 namefile.close()
 
+passwordfile = open("password.txt", "w")
+pwd = input("Password: ")
+
+passwordfile.write(pwd)
+
+passwordfile.close()
+
 print("Setup Done!")
