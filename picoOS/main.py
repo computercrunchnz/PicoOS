@@ -1,7 +1,5 @@
 import time
 
-import getpass
-
 import sys
 
 from machine import Pin
