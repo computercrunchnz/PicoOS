@@ -14,9 +14,8 @@ Boards with the RP2040 processor and Micropython.
 7) If you don't have MicroPython installed on your Pico or RP2040 board, Thonny will ask if you want to install MicroPython. Click install and it may take a few minutes to install MicroPython.
 8) Now open **main.py, setup.py, name.txt, password.txt and smartlight.py** from the git folder and **save it to the Pico or RP2040 board**.
 9) Once that is done run main.py.
-10) The default password is blank so just press enter.
-11) Type in the ```setup``` command in PicoOS to change the name of the Pico or RP2040 board.
-12) Type in the ```help``` command for a list of all commands.
+10) Type in the ```setup``` command in PicoOS to change the name of the Pico or RP2040 board.
+11) Type in the ```help``` command for a list of all commands.
 
 # Setup 2 - For use on Linux.
 1) If you have not put PicoOS on your Pico or RP2040 board, please refer to Setup 1 before this.
