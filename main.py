@@ -37,7 +37,7 @@ while True:
     print()
     if cmd == "about":
         print("About")
-        print("PicoOS 1.0")
+        print("PicoOS 1.0.1")
         print("Made by Crunch Media Group Software")
         print("This PicoPC belongs to " + name + ".")
         print("Report any issues to computercrunchnz+picoos1@gmail.com")
@@ -159,6 +159,7 @@ while True:
         print("'del' - Delete a file")
         print("'setup' - Setup PicoOS")
         print("'help' - Help")
+        print("'reboot' - Restart PicoOS")
         print("'exit' - Exit PicoOS")
         hs = input("Do you need commands for in an app? ")
         if hs == "no":
