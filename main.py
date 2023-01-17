@@ -24,7 +24,7 @@ led.value(1)
 
 time.sleep(0.10)
 
-print("Welcome to PicoOS 1!")
+print("Welcome to PicoOS 1.0.1!")
 print("Report any issues to computercrunchnz+picoos1@gmail.com")
 
 namefile = open("name.txt", "r")
@@ -38,7 +38,7 @@ while True:
     if cmd == "about":
         print("About")
         print("PicoOS 1.0.1")
-        print("Made by Crunch Media Group Software")
+        print("Made by Crunch Media Group Software LTD")
         print("This PicoPC belongs to " + name + ".")
         print("Report any issues to computercrunchnz+picoos1@gmail.com")
     elif cmd == "update":
@@ -120,13 +120,13 @@ while True:
         print("Settings")
         setting = input("What setting do you want to change? ")
         if setting == "exit":
-            print("Okay")
+            print("Exiting Now")
         elif setting == "led.on":
             led.value(1)
-            print("Done!")
+            print("LED Turned On")
         elif setting == "led.off":
             led.value(0)
-            print("Done")
+            print("LED Turned Off")
         elif setting == "led.status":
             print("LED status: " + str(led.value()))
         elif setting == "set-rtc":
@@ -150,9 +150,9 @@ while True:
         print("'war-scenario' - A war scenario generator")
         print("'random-sentence' - A random sentence generator")
         print("'temp' - Check the temperature in celcius")
-        print("'smartlight' - Enter SmartLight Mode - ONLY ENTER IF THIS IS A SMARTLIGHT!")
+        print("'smartlight' - Enter SmartLight Mode - /!\ONLY ENTER IF THIS IS A SMARTLIGHT/!\")
         print("'clicker' - Cookie Clicker")
-        print("'marketshare' - OS Market Share")
+        print("'marketshare' - OS Market Share (real time stock values coming soon )")
         print("'quiz' - News Quiz")
         print("'time' - Tells the time and date")
         print("'ls' - Lists the files")
