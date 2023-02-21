@@ -24,8 +24,12 @@ led.value(1)
 
 time.sleep(0.10)
 
-print("Welcome to PicoOS 1.0.3!")
+version = "1.1"
+versionpostnote = "Beta 2"
+
+print("Welcome to PicoOS!")
 print("Report any issues to computercrunchnz+picoos1@gmail.com")
+print("Version: " + str(version) + " " + str(versionpostnote))
 
 namefile = open("name.txt", "r")
 name = namefile.read()
@@ -37,7 +41,7 @@ while True:
     print()
     if cmd == "about":
         print("About")
-        print("PicoOS 1.0.3")
+        print("PicoOS " + str(version) + " " + str(versionpostnote))
         print("Made by Crunch Media Group Software LTD")
         print("This PicoPC belongs to " + name + ".")
         print("Report any issues to computercrunchnz+picoos1@gmail.com")
