@@ -24,7 +24,7 @@ led.value(1)
 
 time.sleep(0.10)
 
-print("Welcome to PicoOS 1.0.2!")
+print("Welcome to PicoOS 1.0.3!")
 print("Report any issues to computercrunchnz+picoos1@gmail.com")
 
 namefile = open("name.txt", "r")
@@ -37,7 +37,7 @@ while True:
     print()
     if cmd == "about":
         print("About")
-        print("PicoOS 1.0.2")
+        print("PicoOS 1.0.3")
         print("Made by Crunch Media Group Software LTD")
         print("This PicoPC belongs to " + name + ".")
         print("Report any issues to computercrunchnz+picoos1@gmail.com")
@@ -150,7 +150,7 @@ while True:
         print("'war-scenario' - A war scenario generator")
         print("'random-sentence' - A random sentence generator")
         print("'temp' - Check the temperature in celcius")
-        print("'smartlight' - Enter SmartLight Mode - /!\ONLY ENTER IF THIS IS A SMARTLIGHT/!\")
+        print("'smartlight' - Enter SmartLight Mode - /!\ONLY ENTER IF THIS IS A SMARTLIGHT/!\ ")
         print("'clicker' - Cookie Clicker")
         print("'marketshare' - OS Market Share (real time stock values coming soon )")
         print("'quiz' - News Quiz")
