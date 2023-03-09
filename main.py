@@ -10,6 +10,22 @@ import math
 
 import os
 
+from sys import version
+
+pyversion1 = version[20]
+pyversion2 = str(version[22]) + str(version[23])
+pyversion3 = version[25]
+
+if int(pyversion1) < 1:
+    print("Old Python version")
+    sys.exit()
+if int(pyversion2) < 19:
+    print("Old Python Version")
+    sys.exit()
+if int(pyversion3) < 1:
+    print("Old Python Version")
+    sys.exit()
+
 led = Pin(25, Pin.OUT)
 
 led.value(1)
@@ -24,8 +40,12 @@ led.value(1)
 
 time.sleep(0.10)
 
-print("Welcome to PicoOS 1.0.3!")
+osversion = "1.1"
+osversionpostnote = " "
+
+print("Welcome to PicoOS!")
 print("Report any issues to computercrunchnz+picoos1@gmail.com")
+print("Version: " + str(osversion) + " " + str(osversionpostnote))
 
 namefile = open("name.txt", "r")
 name = namefile.read()
@@ -37,13 +57,14 @@ while True:
     print()
     if cmd == "about":
         print("About")
-        print("PicoOS 1.0.3")
+        print("PicoOS " + str(osversion) + " " + str(osversionpostnote))
         print("Made by Crunch Media Group Software LTD")
         print("This PicoPC belongs to " + name + ".")
         print("Report any issues to computercrunchnz+picoos1@gmail.com")
+        print("Micropython version: " + version)
     elif cmd == "update":
         print("Update")
-        print("To get the latest version, go to the PicoOS git repository at https://github.com/computercrunchnz/PicoOS.")
+        print("To get the latest osversion, go to the PicoOS git repository at https://github.com/computercrunchnz/PicoOS.")
     elif cmd == "calculator":
         print("Calculator")
         calc = 1
@@ -557,8 +578,8 @@ while True:
         machine.reset()
     elif cmd == "temp":
         sensor_temp = machine.ADC(4)
-        conversion_factor = 3.3 / (65535)
-        reading = sensor_temp.read_u16() * conversion_factor 
+        conosversion_factor = 3.3 / (65535)
+        reading = sensor_temp.read_u16() * conosversion_factor 
         temperature = 27 - (reading - 0.706)/0.001721
         print("Temperature: " + str(temperature))
     elif cmd == "ls":
