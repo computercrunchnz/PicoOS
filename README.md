@@ -63,4 +63,4 @@ If you have any questions, please contact us at computercrunchnz+picoos1@gmail.c
 Software written by @ComputerCrunch and @STESROS6309wastaken.
 
 # All Builds
-All of the PicoOS builds, including the betas, are located in Releases.
+All of the PicoOS builds, including the betas and alphas, are located in Releases.
