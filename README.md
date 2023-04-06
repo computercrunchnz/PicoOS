@@ -20,15 +20,16 @@ Boards with the RP2040 processor and Micropython.
 # Setup 2 - For use on Linux.
 1) If you have not put PicoOS on your Pico or RP2040 board, please refer to Setup 1 before this.
 2) Open the terminal.
-3) Run the command to get Python3 Pip. ```sudo apt-get install python3-pip``` (Debian & Ubuntu). ```sudo pamac install python3-pip``` (Manjaro).
-4) Run the command to install rshell. ```sudo pip3 install rshell```.
-5) Connect the Pico or RP2040 board to your computer.
-6) Run the command ```sudo rshell```.
-7) Type in repl.
-8) Press ```control-d```
-9) You are now in the PicoOS CLI!
-10) Type in the ```help``` command for a list of all commands.
-11) To exit, type ```exit``` into PicoOS then confirm exit by typing ```Y```, then press ```control-x``` and finally press ```control-d``` to get back to the Linux terminal.
+3) Install python3 ```sudo apt install python3``` (Debian & Ubuntu). ```sudo pamac install python3``` (Manjaro).
+4) Run the command to get Python3 Pip. ```sudo apt-get install python3-pip``` (Debian & Ubuntu). ```sudo pamac install python3-pip``` (Manjaro).
+5) Run the command to install rshell. ```sudo pip3 install rshell```.
+6) Connect the Pico or RP2040 board to your computer.
+7) Run the command ```sudo rshell```.
+8) Type in repl.
+9) Press ```control-d```
+10) You are now in the PicoOS CLI!
+11) Type in the ```help``` command for a list of all commands.
+12) To exit, type ```exit``` into PicoOS then confirm exit by typing ```Y```, then press ```control-x``` and finally press ```control-d``` to get back to the Linux terminal.
 
 # Setup 3 - For use on macOS.
 1) If you have not put PicoOS on your Pico or RP2040 board, please refer to Setup 1 before this.
