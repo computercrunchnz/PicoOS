@@ -21,7 +21,7 @@ Boards with the RP2040 processor and Micropython.
 1) If you have not put PicoOS on your Pico or RP2040 board, please refer to Setup 1 before this.
 2) Open the terminal.
 3) Install python3 ```sudo apt install python3``` (Debian & Ubuntu). ```sudo pamac install python3``` (Manjaro).
-4) Run the command to get Python3 Pip. ```sudo apt-get install python3-pip``` (Debian & Ubuntu). ```sudo pamac install python3-pip``` (Manjaro).
+4) Run the command to get Python3 Pip. ```sudo apt-get install python-pip``` (Debian & Ubuntu). ```sudo pamac install python-pip``` (Manjaro).
 5) Run the command to install rshell. ```sudo pip3 install rshell```.
 6) Connect the Pico or RP2040 board to your computer.
 7) Run the command ```sudo rshell```.
