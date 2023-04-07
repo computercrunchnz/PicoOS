@@ -40,7 +40,7 @@ led.value(1)
 
 time.sleep(0.10)
 
-osversion = "1.1.1"
+osversion = "1.2"
 osversionpostnote = " "
 
 print("Welcome to PicoOS!")
@@ -433,6 +433,8 @@ while True:
             t = "is starting a cyber war with"
         elif type == 9:
             t = "is italianing with"
+        
+        print("DISCLAIMER: THIS IS FICTIONAL - DO NOT TAKE IT AS BEING REAL")
 
         print(country, t, country2, ".")
 
@@ -559,6 +561,8 @@ while True:
             w3 = "plants."
         elif word3 == 18:
             w3 = "Window."
+            
+        print("DISCLAIMER: THIS IS FICTIONAL - DO NOT TAKE IT AS BEING REAL")
 
         print(w, w2, w3)
         
@@ -626,32 +630,32 @@ while True:
     
     elif cmd == "marketshare":
         print("Welcome to Market Share!")
-        print("Latest as of 10/3/2023.")
+        print("Latest as of 8/4/2023.")
         print("From statcounter")
         sector = input("Sector: ")
         if sector == "desktop":
             print("Desktop OS Market Share")
-            print("Windows: 71.78%")
-            print("macOS: 16.26%")
-            print("Unknown: 6.12%")
-            print("Linux: 2.94%")
-            print("ChromeOS: 2.89%")
+            print("Windows: 69.43%")
+            print("macOS: 17.2%")
+            print("Unknown: 7.26%")
+            print("Linux: 2.86%")
+            print("ChromeOS: 3.24%")
             print("FreeBSD: 0.01%")
         elif sector == "tablet":
             print("Tablet OS Market Share")
-            print("iPadOS: 51.21%")
-            print("Android: 48.63%")
+            print("iPadOS: 52.3%")
+            print("Android: 47.54%")
             print("Windows: 0.02%")
-            print("Linux: 0.04%")
-            print("Unknown: 0.08%")
+            print("Linux: 0.09%")
+            print("Unknown: 0.04%")
             print("Blackberry OS: 0.01%")
         elif sector == "mobile":
             print("Mobile OS Market Share")
-            print("Android: 72.26%")
-            print("iOS: 27.11%")
-            print("Samsung: 0.34%")
-            print("KaiOS: 0.13%")
-            print("Unknown: 0.12%")
+            print("Android: 70.93%")
+            print("iOS: 28.37%")
+            print("Samsung: 0.36%")
+            print("KaiOS: 0.12%")
+            print("Unknown: 0.16%")
             print("Windows: 0.02%")
         elif sector == "pico":
             print("Raspberry Pi Pico OS Market Share")
