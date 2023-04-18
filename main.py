@@ -179,6 +179,7 @@ while True:
         print("'ls' - Lists the files")
         print("'del' - Delete a file")
         print("'setup' - Setup PicoOS")
+        print("'run' - Run a program")
         print("'help' - Help")
         print("'reboot' - Restart PicoOS")
         print("'exit' - Exit PicoOS")
@@ -660,7 +661,9 @@ while True:
         elif sector == "pico":
             print("Raspberry Pi Pico OS Market Share")
             print("CMG PicoOS: 100%")
-        
+    elif cmd == "run":
+        imp = input("Run: ")
+        __import__(imp)
     
     #INSERT APP HERE
     
