@@ -4,6 +4,9 @@ An OS for boards with the RP2040 Processor.
 # Compatibility
 Boards with the RP2040 processor and Micropython.
 
+# Support Lifecycle
+Each full release of PicoOS (1.x 2.x etc) gets 2 years of updates from the release date.
+
 # Setup 1 - For Windows, macOS and Linux to add files to the RP2040 Board.
 1) Download and Install Thonny ```wget -O thonny-latest.sh https://thonny.org/installer-for-linux``` (example for Linux).
 2) Connect the Pico or RP2040 board to your computer.
