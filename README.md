@@ -1,5 +1,8 @@
 # PicoOS
-An OS for boards with the RP2040 Processor, Currently Under Development, features are subject to change.
+An OS for boards with the RP2040 Processor.
+
+# Support Lifecycle
+Each major version of PicoOS gets 2 years of software updates.
 
 # Compatibility
 Boards with the RP2040 processor and Micropython.
