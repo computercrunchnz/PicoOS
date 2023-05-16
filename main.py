@@ -40,8 +40,10 @@ led.value(1)
 
 time.sleep(0.10)
 
-osversion = "1.3"
-osversionpostnote = " "
+led.value(0)
+
+osversion = "2.0"
+osversionpostnote = "Alpha 2"
 
 print("Welcome to PicoOS!")
 print("Report any issues to computercrunchnz+picoos1@gmail.com")
@@ -55,6 +57,7 @@ namefile.close()
 while True:
     cmd = input("> ")
     print()
+    led.value(1)
     if cmd == "about":
         print("About")
         print("PicoOS " + str(osversion) + " " + str(osversionpostnote))
@@ -142,14 +145,6 @@ while True:
         setting = input("What setting do you want to change? ")
         if setting == "exit":
             print("Exiting Now")
-        elif setting == "led.on":
-            led.value(1)
-            print("LED Turned On")
-        elif setting == "led.off":
-            led.value(0)
-            print("LED Turned Off")
-        elif setting == "led.status":
-            print("LED status: " + str(led.value()))
         elif setting == "set-rtc":
             year = input("Year: ")
             month = input("Month: ")
@@ -179,6 +174,7 @@ while True:
         print("'ls' - Lists the files")
         print("'del' - Delete a file")
         print("'setup' - Setup PicoOS")
+        print("'run' - Run a program from another file")
         print("'help' - Help")
         print("'reboot' - Restart PicoOS")
         print("'exit' - Exit PicoOS")
@@ -245,11 +241,12 @@ while True:
         elif hs == "settings":
             print("Settings Help")
             print("SETTINGS:")
-            print("'led.on' - Turn the board LED on")
-            print("'led.off' - Turn the board LED off")
-            print("'led.status' - Check the status of the board LED")
             print("'set-rtc' - Set the onboard clock")
             print("'exit' - Exit Settings")
+        elif hs == "run":
+            print("Run Help")
+            print("HOW TO USE")
+            print("Type in the file name of the program you want to use.")l
     elif cmd == "exit":
         bai = input("Exit PicoOS Y/N: ")
         if bai == "Y":
@@ -613,8 +610,8 @@ while True:
                 cookies = cookies+1
     elif cmd == "quiz":
         print("Welcome to News Quiz!")
-        questions = ("When was King Charles III's Coronation? DD/MM/YYYY", "What is the 'i' in Intel Core going to be replaced with?", "Are AMD Ryzen 7000X3D chips overheating? Y/N", "What does OS Stand For", "How many subscribers does Computer Crunch have as of 12/5/2023?")
-        answers = ("06/05/2023", "Ultra", "Y", "Operating System", "97")
+        questions = ("When is King Charles III's Coronation? DD/MM/YYYY", "Who is the President of the US?", "What does GPU stand for?", "What does AMD stand for?", "How many subscribers does Computer Crunch have as of 10/03/2023?")
+        answers = ("06/05/2023", "Joe Biden", "Graphics Processing Unit", "Advanced Micro Devices", "85")
         quizq = 0
         quizs = 0
         while quizq < len(questions):
@@ -630,40 +627,41 @@ while True:
     
     elif cmd == "marketshare":
         print("Welcome to Market Share!")
-        print("Latest as of 12/5/2023.")
+        print("Latest as of 8/4/2023.")
         print("From statcounter")
         sector = input("Sector: ")
         if sector == "desktop":
             print("Desktop OS Market Share")
-            print("Windows: 63.13%")
-            print("macOS: 17.78%")
-            print("Unknown: 12.5%")
-            print("Linux: 2.83%")
-            print("ChromeOS: 3.74%")
+            print("Windows: 69.43%")
+            print("macOS: 17.2%")
+            print("Unknown: 7.26%")
+            print("Linux: 2.86%")
+            print("ChromeOS: 3.24%")
             print("FreeBSD: 0.01%")
         elif sector == "tablet":
             print("Tablet OS Market Share")
-            print("iPadOS: 54.41%")
-            print("Android: 45.38%")
-            print("Windows: 0.03%")
-            print("Linux: 0.14%")
-            print("Unknown: 0.03%")
+            print("iPadOS: 52.3%")
+            print("Android: 47.54%")
+            print("Windows: 0.02%")
+            print("Linux: 0.09%")
+            print("Unknown: 0.04%")
             print("Blackberry OS: 0.01%")
         elif sector == "mobile":
             print("Mobile OS Market Share")
-            print("Android: 68.79%")
-            print("iOS: 30.44%")
-            print("Samsung: 0.42%")
+            print("Android: 70.93%")
+            print("iOS: 28.37%")
+            print("Samsung: 0.36%")
             print("KaiOS: 0.12%")
-            print("Unknown: 0.17%")
-            print("Windows: 0.03%")
+            print("Unknown: 0.16%")
+            print("Windows: 0.02%")
         elif sector == "pico":
             print("Raspberry Pi Pico OS Market Share")
             print("CMG PicoOS: 100%")
-        
-    
-    #INSERT APP HERE
-    
+            
+    elif cmd == "run":
+        run = input("File Name: ")
+        __import__(run)
     
     
     print()
+    led.value(0)
