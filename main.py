@@ -55,15 +55,15 @@ pin27 = Pin(27, Pin.OUT)
 pin28 = Pin(28, Pin.OUT)
 
 osversion = "2.0"
-osversionpostnote = "Alpha 3"
+osversionpostnote = "Alpha 4"
 
 print("Welcome to PicoOS!")
 print("Report any issues to computercrunchnz+picoos1@gmail.com")
 print("Version: " + str(osversion) + " " + str(osversionpostnote))
 
-#namefile = open("name.txt", "r")
-#name = namefile.read()
-#namefile.close()
+namefile = open("name.txt", "r")
+name = namefile.read()
+namefile.close()
 
 
 while True:
