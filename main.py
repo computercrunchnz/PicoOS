@@ -12,20 +12,6 @@ import os
 
 from sys import version
 
-pyversion1 = version[20]
-pyversion2 = str(version[22]) + str(version[23])
-pyversion3 = version[25]
-
-if int(pyversion1) < 1:
-    print("Old Python version")
-    sys.exit()
-if int(pyversion2) < 19:
-    print("Old Python Version")
-    sys.exit()
-if int(pyversion3) < 1:
-    print("Old Python Version")
-    sys.exit()
-
 led = Pin(25, Pin.OUT)
 
 led.value(1)
@@ -40,8 +26,8 @@ led.value(1)
 
 time.sleep(0.10)
 
-osversion = "1.1"
-osversionpostnote = "Beta 3"
+osversion = "1.4"
+osversionpostnote = "Beta 1"
 
 print("Welcome to PicoOS!")
 print("Report any issues to computercrunchnz+picoos1@gmail.com")
@@ -62,9 +48,11 @@ while True:
         print("This PicoPC belongs to " + name + ".")
         print("Report any issues to computercrunchnz+picoos1@gmail.com")
         print("Micropython version: " + version)
+        print("PicoOS 1 support ends on 11/1/2025")
     elif cmd == "update":
         print("Update")
-        print("To get the latest osversion, go to the PicoOS git repository at https://github.com/computercrunchnz/PicoOS.")
+        print("To download the latest version, go to the PicoOS git repository at https://github.com/computercrunchnz/PicoOS/.")
+        print("PicoOS 1 support ends on 11/1/2025")
     elif cmd == "calculator":
         print("Calculator")
         calc = 1
@@ -433,6 +421,8 @@ while True:
             t = "is starting a cyber war with"
         elif type == 9:
             t = "is italianing with"
+        
+        print("DISCLAIMER: THIS IS FICTIONAL - DO NOT TAKE IT AS BEING REAL")
 
         print(country, t, country2, ".")
 
@@ -559,6 +549,8 @@ while True:
             w3 = "plants."
         elif word3 == 18:
             w3 = "Window."
+            
+        print("DISCLAIMER: THIS IS FICTIONAL - DO NOT TAKE IT AS BEING REAL")
 
         print(w, w2, w3)
         
@@ -609,8 +601,8 @@ while True:
                 cookies = cookies+1
     elif cmd == "quiz":
         print("Welcome to News Quiz!")
-        questions = ("What does WWDC stand for?", "How old is the queen?", "Who is the founder of amazon?", "Y/N: Does the EU want a common charger on all phones?", "What does CPU stand for")
-        answers = ("World Wide Developers Conference", "96", "Jeff Bezos", "Y", "Central Processing Unit")
+        questions = ("When was King Charles III's Coronation? DD/MM/YYYY", "What is the 'i' in Intel Core going to be replaced with?", "Are AMD Ryzen 7000X3D chips overheating? Y/N", "What does OS Stand For", "How many subscribers does Computer Crunch have as of 12/5/2023?")
+        answers = ("06/05/2023", "Ultra", "Y", "Operating System", "97")
         quizq = 0
         quizs = 0
         while quizq < len(questions):
@@ -626,33 +618,33 @@ while True:
     
     elif cmd == "marketshare":
         print("Welcome to Market Share!")
-        print("Latest as of 20/2/2023.")
+        print("Latest as of 12/5/2023.")
         print("From statcounter")
         sector = input("Sector: ")
         if sector == "desktop":
             print("Desktop OS Market Share")
-            print("Windows: 74.14%")
-            print("macOS: 15.33%")
-            print("Unknown: 5.27%")
-            print("Linux: 2.91%")
-            print("ChromeOS: 2.34%")
+            print("Windows: 63.13%")
+            print("macOS: 17.78%")
+            print("Unknown: 12.5%")
+            print("Linux: 2.83%")
+            print("ChromeOS: 3.74%")
             print("FreeBSD: 0.01%")
         elif sector == "tablet":
             print("Tablet OS Market Share")
-            print("iPadOS: 51.44%")
-            print("Android: 48.42%")
-            print("Windows: 0.02%")
-            print("Linux: 0.04%")
-            print("Unknown: 0.06%")
+            print("iPadOS: 54.41%")
+            print("Android: 45.38%")
+            print("Windows: 0.03%")
+            print("Linux: 0.14%")
+            print("Unknown: 0.03%")
             print("Blackberry OS: 0.01%")
         elif sector == "mobile":
             print("Mobile OS Market Share")
-            print("Android: 71.74%")
-            print("iOS: 27.63%")
-            print("Samsung: 0.35%")
-            print("KaiOS: 0.11%")
-            print("Unknown: 0.12%")
-            print("Windows: 0.02%")
+            print("Android: 68.79%")
+            print("iOS: 30.44%")
+            print("Samsung: 0.42%")
+            print("KaiOS: 0.12%")
+            print("Unknown: 0.17%")
+            print("Windows: 0.03%")
         elif sector == "pico":
             print("Raspberry Pi Pico OS Market Share")
             print("CMG PicoOS: 100%")
