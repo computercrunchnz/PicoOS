@@ -55,10 +55,10 @@ pin27 = Pin(27, Pin.OUT)
 pin28 = Pin(28, Pin.OUT)
 
 osversion = "2.0"
-osversionpostnote = "Alpha 4"
+osversionpostnote = "Alpha 6"
 
 print("Welcome to PicoOS!")
-print("Report any issues to computercrunchnz+picoos1@gmail.com")
+print("Report any issues to computercrunchnz+picoos2@gmail.com")
 print("Version: " + str(osversion) + " " + str(osversionpostnote))
 
 namefile = open("name.txt", "r")
@@ -75,7 +75,7 @@ while True:
         print("PicoOS " + str(osversion) + " " + str(osversionpostnote))
         print("Made by Crunch Media Group Software LTD")
         print("This PicoPC belongs to " + name + ".")
-        print("Report any issues to computercrunchnz+picoos1@gmail.com")
+        print("Report any issues to computercrunchnz+picoos2@gmail.com")
         print("Micropython version: " + version)
     elif cmd == "update":
         print("Update")
@@ -178,7 +178,6 @@ while True:
         print("'war-scenario' - A war scenario generator")
         print("'random-sentence' - A random sentence generator")
         print("'temp' - Check the temperature in celcius")
-        print("'smartlight' - Enter SmartLight Mode - /!\ONLY ENTER IF THIS IS A SMARTLIGHT/!\ ")
         print("'clicker' - Cookie Clicker")
         print("'marketshare' - OS Market Share (real time stock values coming soon)")
         print("'quiz' - News Quiz")
@@ -207,27 +206,6 @@ while True:
             print("'Enter Key' - Click 1 cookie.")
             print("'cookies' - Number of cookies.")
             print("'exit' - Exit Cookie Clicker.")
-        elif hs == "smartlight":
-            print("SmartLight Help")
-            print("COMMANDS:")
-            print("'on.all' - Turn on all LEDs.")
-            print("'on.x' - Turn on x colour led.")
-            print("'off.all' - Turn off all LEDs.")
-            print("'on.x' - Turn off x colour led.")
-            print("'flash.all' - Flash all LEDs.")
-            print("'flash.stop' - Stop flashing LEDs.")
-            print("'strobe.all' - Strobe all LEDs.")
-            print("'strobe.stop' - Stop strobing LEDs.")
-            print("'scroll.fast' - Scroll fast.")
-            print("'scroll.slow' - Scroll slow.")
-            print("'scroll.stop' - Stop scrolling.")
-            print("'start.5min' - 5 minute sailing start sequence.")
-            print("'start.3min' - 3 minute sailing start sequence.")
-            print("'start.stop' - Stop the start sequence.")
-            print("'about' - About.")
-            print("'trafficlight' - Traffic Light.")
-            print("'restart' - Restart the pico.")
-            print("'exit' - Exit SmartLight.")
         elif hs == "calculator":
             print("Calculator Help")
             print("FUNCTIONS:")
@@ -279,179 +257,116 @@ while True:
         lev = input("Level: E, M or H: ")
 
         q = 0
+        
+        a = 1
 
         nq = 1
+        
+        answers = [0, ]
+        
+        print("QUESTIONS")
+        
+        print("ROUND TO 2 DECIMAL PLACES")
 
         while q < 100:
-          if lev == "H":
-            n1 = randint(1, 1000)
-            n2 = randint(1, 1000)
-            t = randint(1, 4)
-            if t == 1:
-                print("Q",nq, ". What is ", n1, "+", n2, "?")
-                q = q + 1
-                nq = nq + 1 
-            elif t == 2:
-                print("Q",nq, ". What is ", n1, "-", n2, "?")
-                q = q + 1
-                nq = nq + 1
-            elif t == 3:
-                print("Q", nq, ". What is ", n1, "*", n2, "?")
-                q = q + 1
-                nq = nq + 1
-            elif t == 4:
-                print("Q", nq, ". What is ", n1, "/", n2, "?")
-                q = q + 1
-                nq = nq + 1
-          elif lev == "M":
-            n1 = randint(1, 100)
-            n2 = randint(1, 100)
-            t = randint(1, 4)
-            if t == 1:
-                print("Q",nq, ". What is ", n1, "+", n2, "?")
-                q = q + 1
-                nq = nq + 1 
-            elif t == 2:
-                print("Q",nq, ". What is ", n1, "-", n2, "?")
-                q = q + 1
-                nq = nq + 1
-            elif t == 3:
-                print("Q", nq, ". What is ", n1, "*", n2, "?")
-                q = q + 1
-                nq = nq + 1
-            elif t == 4:
-                print("Q", nq, ". What is ", n1, "/", n2, "?")
-                q = q + 1
-                nq = nq + 1
-          elif lev == "E":
-            n1 = randint(1, 10)
-            n2 = randint(1, 10)
-            t = randint(1, 4)
-            if t == 1:
-                print("Q",nq, ". What is ", n1, "+", n2, "?")
-                q = q + 1
-                nq = nq + 1 
-            elif t == 2:
-                print("Q",nq, ". What is ", n1, "-", n2, "?")
-                q = q + 1
-                nq = nq + 1
-            elif t == 3:
-                print("Q", nq, ". What is ", n1, "*", n2, "?")
-                q = q + 1
-                nq = nq + 1
-            elif t == 4:
-                print("Q", nq, ". What is ", n1, "/", n2, "?")
-                q = q + 1
-                nq = nq + 1
+            if lev == "H":
+                n1 = randint(1, 1000)
+                n2 = randint(1, 1000)
+                t = randint(1, 4)
+                if t == 1:
+                    print("Q",nq, ". What is ", n1, "+", n2, "?")
+                    q = q + 1
+                    nq = nq + 1
+                    answer = n1 + n2
+                elif t == 2:
+                    print("Q",nq, ". What is ", n1, "-", n2, "?")
+                    q = q + 1
+                    nq = nq + 1
+                    answer = n1 - n2
+                elif t == 3:
+                    print("Q", nq, ". What is ", n1, "*", n2, "?")
+                    q = q + 1
+                    nq = nq + 1
+                    answer = n1 * n2
+                elif t == 4:
+                    print("Q", nq, ". What is ", n1, "/", n2, "?")
+                    q = q + 1
+                    nq = nq + 1
+                    answer = n1 / n2
+            elif lev == "M":
+                n1 = randint(1, 100)
+                n2 = randint(1, 100)
+                t = randint(1, 4)
+                if t == 1:
+                    print("Q",nq, ". What is ", n1, "+", n2, "?")
+                    q = q + 1
+                    nq = nq + 1
+                    answer = n1 + n2
+                elif t == 2:
+                    print("Q",nq, ". What is ", n1, "-", n2, "?")
+                    q = q + 1
+                    nq = nq + 1
+                    answer = n1 - n2
+                elif t == 3:
+                    print("Q", nq, ". What is ", n1, "*", n2, "?")
+                    q = q + 1
+                    nq = nq + 1
+                    answer = n1 * n2
+                elif t == 4:
+                    print("Q", nq, ". What is ", n1, "/", n2, "?")
+                    q = q + 1
+                    nq = nq + 1
+                    answer = n1 / n2
+            
+            elif lev == "E":
+                n1 = randint(1, 10)
+                n2 = randint(1, 10)
+                t = randint(1, 4)
+                if t == 1:
+                    print("Q",nq, ". What is ", n1, "+", n2, "?")
+                    q = q + 1
+                    nq = nq + 1
+                    answer = n1 + n2
+                elif t == 2:
+                    print("Q",nq, ". What is ", n1, "-", n2, "?")
+                    q = q + 1
+                    nq = nq + 1
+                    answer = n1 - n2
+                elif t == 3:
+                    print("Q", nq, ". What is ", n1, "*", n2, "?")
+                    q = q + 1
+                    nq = nq + 1
+                    answer = n1 * n2
+                elif t == 4:
+                    print("Q", nq, ". What is ", n1, "/", n2, "?")
+                    q = q + 1
+                    nq = nq + 1
+                    answer = n1 / n2
+            af = round(answer, 2)
+            answers.append(af)
+        print("ANSWERS")
+        while a < 101:
+            print("Q" + " " + str(a) + ": " + str(answers[a]))
+            a = a + 1
     elif cmd == "war-scenario":
         from random import randint
 
         q = 0
 
         nq = 1
-
-        ctry = randint(1, 18)
-
-        ctry2 = randint(1, 18)
-
-        if ctry == 1:
-            country = "New Zealand"
-        elif ctry == 2:
-            country = "Australia"
-        elif ctry == 3:
-            country = "Austria"
-        elif ctry == 4:
-            country = "South Africa"
-        elif ctry == 5:
-            country = "Russia"
-        elif ctry == 6:
-            country = "Ukraine"
-        elif ctry == 7:
-            country = "UK"
-        elif ctry == 8:
-            country = "France"
-        elif ctry == 9:
-            country = "US"
-        elif ctry == 10:
-            country = "India"
-        elif ctry == 11:
-            country = "China"
-        elif ctry == 12:
-            country = "Fiji"
-        elif ctry == 13:
-            country = "Brazil"
-        elif ctry == 14:
-            country = "Canada"
-        elif ctry == 15:
-            country = "Mexico"
-        elif ctry == 16:
-            country = "Singapore"
-        elif ctry == 17:
-            country = "Hong Kong"
-        elif ctry == 18:
-            country = "Taiwan"
-
-        if ctry2 == 1:
-            country2 = "New Zealand"
-        elif ctry2 == 2:
-            country2 = "Australia"
-        elif ctry2 == 3:
-            country2 = "Austria"
-        elif ctry2 == 4:
-            country2 = "South Africa"
-        elif ctry2 == 5:
-            country2 = "Russia"
-        elif ctry2 == 6:
-            country2 = "Ukraine"
-        elif ctry2 == 7:
-            country2 = "UK"
-        elif ctry2 == 8:
-            country2 = "France"
-        elif ctry2 == 9:
-            country2 = "US"
-        elif ctry2 == 10:
-            country2 = "India"
-        elif ctry == 11:
-            country2 = "China"
-        elif ctry2 == 12:
-            country2 = "Fiji"
-        elif ctry2 == 13:
-            country2 = "Brazil"
-        elif ctry2 == 14:
-            country2 = "Canada"
-        elif ctry2 == 15:
-            country2 = "Mexico"
-        elif ctry2 == 16:
-            country2 = "Singapore"
-        elif ctry2 == 17:
-            country2 = "Hong Kong"
-        elif ctry2 == 18:
-            country2 = "Taiwan"
-            
-        type = randint(1,9)
-
-        if type == 1:
-            t = "is starting a Nuclear war with"
-        elif type == 2:
-            t = "is starting a war with"
-        elif type == 3:
-            t = "is invading"
-        elif type == 4:
-            t = "is pooping on"
-        elif type == 5:
-            t = "is bombing"
-        elif type == 6:
-            t = "is punching"
-        elif type == 7:
-            t = "is starting a civil war with"
-        elif type == 8:
-            t = "is starting a cyber war with"
-        elif type == 9:
-            t = "is italianing with"
         
-        print("DISCLAIMER: THIS IS FICTIONAL - DO NOT TAKE IT AS BEING REAL")
+        country = ["New Zealand", "Australia", "Austria", "South Africa", "You", "Russia", "Ukraine", "The United Kingdom", "France", "The United States", "India", "China", "Fiji", "Brazil", "Mexico", "Singapore", "Hong Kong", "Germany", "Poland", "Spain", "Mongolia", "Samoa", "Finland", "Ireland", "Italy", "Sweeden", "Japan", "Taiwan", "Chile", "Canada",]
 
-        print(country, t, country2, ".")
+        wartype = ["is starting a Nuclear War with", "is starting a war with", "is invading", "is pooping on", "is bombing", "is punching", "is starting a civil war with", "is starting a cyber war with", "is Italianing with", "is starting an AI war with", "is starting a space war with",]
+        
+        ctry = randint(0, len(country)-1)
+
+        ctry2 = randint(0, len(country)-1)
+
+            
+        tpe = randint(0, len(wartype))
+
+        print(country[ctry], wartype[tpe], country[ctry2] + ".")
 
     elif cmd == "random-sentence":
         from random import randint
@@ -459,127 +374,25 @@ while True:
         q = 0
 
         nq = 1
+        
+        w = ["Ur Mum", "Ur Dad", "Computer Crunch", "Your Cat", "Your Dog", "Donald Trump", "Raspberry Pi", "Apple", "Microsoft", "Google", "Meta", ]
+        
+        w2 = ["did", "is doing", "saw", "calculated", "is on planet", "fixed", "created", "helped", "is in", "started up", "typed", "is a", "is", "is on the", ]
+        
+        w3 = ["YouTube", "Earth", "Ur Mum", "Ur Dad", "Ur Cat", "Your Computer", "grass", "mars", "macOS", "faliure", "poem", "maintenance", "piano", "disaster", "customer", "software", "stranger", "bird", "guest", "orange", "spray tan", "guitar", "Interislander", "bad", "good", "Bluebridge", "train", "bus", "plane",]
+        
+        
 
-        word = randint(1, 18)
+        word = randint(0, len(w)-1)
 
-        word2 = randint(1, 18)
+        word2 = randint(0, len(w2)-1)
 
-        word3 = randint(1, 18)
-
-        if word == 1:
-            w = "Mac"
-        elif word == 2:
-            w = "Apple"
-        elif word == 3:
-            w = "Microsoft"
-        elif word == 4:
-            w = "Poop"
-        elif word == 5:
-            w = "Ur Mum"
-        elif word == 6:
-            w = "Eggs"
-        elif word == 7:
-            w = "Bomb"
-        elif word == 8:
-            w = "Speaker"
-        elif word == 9:
-            w = "Cat"
-        elif word == 10:
-            w = "Dog"
-        elif word == 11:
-            w = "Kitten"
-        elif word == 12:
-            w = "Meow"
-        elif word == 13:
-            w = "Puppy"
-        elif word == 14:
-            w = "Python"
-        elif word == 15:
-            w = "Message"
-        elif word == 16:
-            w = "Macintosh"
-        elif word == 17:
-            w = "Sad"
-        elif word == 18:
-            w = "News"
-
-        if word2 == 1:
-            w2 = "is"
-        elif word2 == 2:
-            w2 = "are"
-        elif word2 == 3:
-            w2 = "is doing"
-        elif word2 == 4:
-            w2 = "throwing"
-        elif word2 == 5:
-            w2 = "war"
-        elif word2 == 6:
-            w2 = "calendared"
-        elif word2 == 7:
-            w2 = "calculated"
-        elif word2 == 8:
-            w2 = "did"
-        elif word2 == 9:
-            w2 = "ate"
-        elif word2 == 10:
-            w2 = "crunch"
-        elif word == 11:
-            w2 = "reading"
-        elif word2 == 12:
-            w2 = "is typing"
-        elif word2 == 13:
-            w2 = "is editing"
-        elif word2 == 14:
-            w2 = "streaming live to"
-        elif word2 == 15:
-            w2 = "is switching"
-        elif word2 == 16:
-            w2 = "listened"
-        elif word2 == 17:
-            w2 = "took a photo of"
-        elif word2 == 18:
-            w2 = "found"
-
-        if word3 == 1:
-            w3 = "1+1."
-        elif word3 == 2:
-            w3 = "videos."
-        elif word3 == 3:
-            w3 = "pooping."
-        elif word3 == 4:
-            w3 = "words."
-        elif word3 == 5:
-            w3 = "Ur Mum."
-        elif word3 == 6:
-            w3 = "processors."
-        elif word3 == 7:
-            w3 = "moved."
-        elif word3 == 8:
-            w3 = "food."
-        elif word3 == 9:
-            w3 = "computer."
-        elif word3 == 10:
-            w3 = "terminal."
-        elif word == 11:
-            w3 = "starting a war."
-        elif word3 == 12:
-            w3 = "doing maths."
-        elif word3 == 13:
-            w3 = "messaging."
-        elif word3 == 14:
-            w3 = "twitch."
-        elif word3 == 15:
-            w3 = "googling."
-        elif word3 == 16:
-            w3 = "writing."
-        elif word3 == 17:
-            w3 = "plants."
-        elif word3 == 18:
-            w3 = "Window."
+        word3 = randint(0, len(w3)-1)
+        
             
         print("DISCLAIMER: THIS IS FICTIONAL - DO NOT TAKE IT AS BEING REAL")
 
-        print(w, w2, w3)
+        print(w[word], w2[word2], w3[word3])
         
     elif cmd == "time":
         tm = machine.RTC().datetime()
@@ -609,8 +422,6 @@ while True:
         os.remove(todel)
     elif cmd == "setup":
         import setup
-    elif cmd == "smartlight":
-        import smartlight
     elif cmd == "clicker":
         click = 1
         cookies = 0
