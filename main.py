@@ -26,36 +26,8 @@ led.value(1)
 
 time.sleep(0.10)
 
-led.value(0)
-
-pin0 = Pin(0, Pin.OUT)
-pin1 = Pin(1, Pin.OUT)
-pin2 = Pin(2, Pin.OUT)
-pin3 = Pin(3, Pin.OUT)
-pin4 = Pin(4, Pin.OUT)
-pin5 = Pin(5, Pin.OUT)
-pin6 = Pin(6, Pin.OUT)
-pin7 = Pin(7, Pin.OUT)
-pin8 = Pin(8, Pin.OUT)
-pin9 = Pin(9, Pin.OUT)
-pin10 = Pin(10, Pin.OUT)
-pin11 = Pin(11, Pin.OUT)
-pin12 = Pin(12, Pin.OUT)
-pin13 = Pin(13, Pin.OUT)
-pin14 = Pin(14, Pin.OUT)
-pin15 = Pin(15, Pin.OUT)
-pin16 = Pin(16, Pin.OUT)
-pin17 = Pin(17, Pin.OUT)
-pin18 = Pin(18, Pin.OUT)
-pin19 = Pin(19, Pin.OUT)
-pin20 = Pin(20, Pin.OUT)
-pin21 = Pin(21, Pin.OUT)
-pin26 = Pin(26, Pin.OUT)
-pin27 = Pin(27, Pin.OUT)
-pin28 = Pin(28, Pin.OUT)
-
-osversion = "2.0"
-osversionpostnote = "Alpha 4"
+osversion = "1.4"
+osversionpostnote = "Beta 2"
 
 print("Welcome to PicoOS!")
 print("Report any issues to computercrunchnz+picoos1@gmail.com")
@@ -69,17 +41,18 @@ namefile.close()
 while True:
     cmd = input("> ")
     print()
-    led.value(1)
     if cmd == "about":
         print("About")
         print("PicoOS " + str(osversion) + " " + str(osversionpostnote))
         print("Made by Crunch Media Group Software LTD")
         print("This PicoPC belongs to " + name + ".")
         print("Report any issues to computercrunchnz+picoos1@gmail.com")
-        print("Micropython version: " + version)
+        print("Python version: " + version)
+        print("PicoOS 1 support ends on 11/1/2025")
     elif cmd == "update":
         print("Update")
         print("To download the latest version, go to the PicoOS git repository at https://github.com/computercrunchnz/PicoOS/.")
+        print("PicoOS 1 support ends on 11/1/2025")
     elif cmd == "calculator":
         print("Calculator")
         calc = 1
@@ -157,6 +130,14 @@ while True:
         setting = input("What setting do you want to change? ")
         if setting == "exit":
             print("Exiting Now")
+        elif setting == "led.on":
+            led.value(1)
+            print("LED Turned On")
+        elif setting == "led.off":
+            led.value(0)
+            print("LED Turned Off")
+        elif setting == "led.status":
+            print("LED status: " + str(led.value()))
         elif setting == "set-rtc":
             year = input("Year: ")
             month = input("Month: ")
@@ -180,15 +161,12 @@ while True:
         print("'temp' - Check the temperature in celcius")
         print("'smartlight' - Enter SmartLight Mode - /!\ONLY ENTER IF THIS IS A SMARTLIGHT/!\ ")
         print("'clicker' - Cookie Clicker")
-        print("'marketshare' - OS Market Share (real time stock values coming soon)")
+        print("'marketshare' - OS Market Share (real time stock values coming soon )")
         print("'quiz' - News Quiz")
         print("'time' - Tells the time and date")
         print("'ls' - Lists the files")
         print("'del' - Delete a file")
         print("'setup' - Setup PicoOS")
-        print("'run' - Run a program from another file")
-        print("'pin-control' - Control GPIO Pins")
-        print("'pin-viewer' - View GPIO Pin Values")
         print("'help' - Help")
         print("'reboot' - Restart PicoOS")
         print("'exit' - Exit PicoOS")
@@ -255,16 +233,11 @@ while True:
         elif hs == "settings":
             print("Settings Help")
             print("SETTINGS:")
+            print("'led.on' - Turn the board LED on")
+            print("'led.off' - Turn the board LED off")
+            print("'led.status' - Check the status of the board LED")
             print("'set-rtc' - Set the onboard clock")
             print("'exit' - Exit Settings")
-        elif hs == "run":
-            print("Run Help")
-            print("HOW TO USE")
-            print("Type in the file name of the program you want to use.")
-        elif hs == "pin-control":
-            print("Pin Control Help")
-            print("COMMANDS")
-            print("Enter '999' into 'Pin GPIO Number' to exit.")
     elif cmd == "exit":
         bai = input("Exit PicoOS Y/N: ")
         if bai == "Y":
@@ -628,8 +601,8 @@ while True:
                 cookies = cookies+1
     elif cmd == "quiz":
         print("Welcome to News Quiz!")
-        questions = ("When was King Charles III's Coronation? DD/MM/YYYY", "What is the 'i' in Intel Core going to be replaced with?", "Are AMD Ryzen 7000X3D chips overheating? Y/N", "What does OS Stand For", "How many subscribers does Computer Crunch have as of 12/5/2023?")
-        answers = ("06/05/2023", "Ultra", "Y", "Operating System", "97")
+        questions = ("When will PicoOS 2 be released? (DD/MM/YYYY) ", "What is the 'i' in Intel Core going to be replaced with?", "Are AMD Ryzen 7000X3D chips overheating? Y/N", "What does OS Stand For", "How many subscribers does Computer Crunch have as of 12/5/2023?")
+        answers = ("04/09/2023", "Ultra", "Y", "Operating System", "97")
         quizq = 0
         quizs = 0
         while quizq < len(questions):
@@ -675,176 +648,10 @@ while True:
         elif sector == "pico":
             print("Raspberry Pi Pico OS Market Share")
             print("CMG PicoOS: 100%")
-            
-    elif cmd == "run":
-        run = input("File Name: ")
-        __import__(run)
-    
-    elif cmd == "pin-control":
-        pincontrol = True
-        while pincontrol == True:
-            pinno = input("Pin GPIO Number: ")
-            pinac = input("Value (1 or 0): ")
-            if int(pinno) == 0:
-                if int(pinac) == 1:
-                    pin0.value(1)
-                elif int(pinac) == 0:
-                    pin0.value(0)
-            elif int(pinno) == 1:
-                if int(pinac) == 1:
-                    pin1.value(1)
-                elif int(pinac) == 0:
-                    pin1.value(0)
-            elif int(pinno) == 2:
-                if int(pinac) == 1:
-                    pin2.value(1)
-                elif int(pinac) == 0:
-                    pin2.value(0)
-            elif int(pinno) == 3:
-                if int(pinac) == 1:
-                    pin3.value(1)
-                elif int(pinac) == 0:
-                    pin3.value(0)
-            elif int(pinno) == 4:
-                if int(pinac) == 1:
-                    pin4.value(1)
-                elif int(pinac) == 0:
-                    pin4.value(0)
-            elif int(pinno) == 5:
-                if int(pinac) == 1:
-                    pin5.value(1)
-                elif int(pinac) == 0:
-                    pin5.value(0)
-            elif int(pinno) == 6:
-                if int(pinac) == 1:
-                    pin6.value(1)
-                elif int(pinac) == 0:
-                    pin6.value(0)
-            elif int(pinno) == 7:
-                if int(pinac) == 1:
-                    pin7.value(1)
-                elif int(pinac) == 0:
-                    pin7.value(0)
-            elif int(pinno) == 8:
-                if int(pinac) == 1:
-                    pin8.value(1)
-                elif int(pinac) == 0:
-                    pin8.value(0)
-            elif int(pinno) == 9:
-                if int(pinac) == 1:
-                    pin9.value(1)
-                elif int(pinac) == 0:
-                    pin9.value(0)
-            elif int(pinno) == 10:
-                if int(pinac) == 1:
-                    pin10.value(1)
-                elif int(pinac) == 0:
-                    pin10.value(0)
-            elif int(pinno) == 11:
-                if int(pinac) == 1:
-                    pin11.value(1)
-                elif int(pinac) == 0:
-                    pin11.value(0)
-            elif int(pinno) == 12:
-                if int(pinac) == 1:
-                    pin12.value(1)
-                elif int(pinac) == 0:
-                    pin12.value(0)
-            elif int(pinno) == 13:
-                if int(pinac) == 1:
-                    pin13.value(1)
-                elif int(pinac) == 0:
-                    pin13.value(0)
-            elif int(pinno) == 14:
-                if int(pinac) == 1:
-                    pin14.value(1)
-                elif int(pinac) == 0:
-                    pin14.value(0)
-            elif int(pinno) == 15:
-                if int(pinac) == 1:
-                    pin15.value(1)
-                elif int(pinac) == 0:
-                    pin15.value(0)
-            elif int(pinno) == 16:
-                if int(pinac) == 1:
-                    pin16.value(1)
-                elif int(pinac) == 0:
-                    pin16.value(0)
-            elif int(pinno) == 17:
-                if int(pinac) == 1:
-                    pin17.value(1)
-                elif int(pinac) == 0:
-                    pin17.value(0)
-            elif int(pinno) == 18:
-                if int(pinac) == 1:
-                    pin18.value(1)
-                elif int(pinac) == 0:
-                    pin18.value(0)
-            elif int(pinno) == 19:
-                if int(pinac) == 1:
-                    pin19.value(1)
-                elif int(pinac) == 0:
-                    pin19.value(0)
-            elif int(pinno) == 20:
-                if int(pinac) == 1:
-                    pin20.value(1)
-                elif int(pinac) == 0:
-                    pin20.value(0)
-            elif int(pinno) == 21:
-                if int(pinac) == 1:
-                    pin21.value(1)
-                elif int(pinac) == 0:
-                    pin21.value(0)
-            elif int(pinno) == 26:
-                if int(pinac) == 1:
-                    pin26.value(1)
-                elif int(pinac) == 0:
-                    pin26.value(0)
-            elif int(pinno) == 27:
-                if int(pinac) == 1:
-                    pin27.value(1)
-                elif int(pinac) == 0:
-                    pin27.value(0)
-            elif int(pinno) == 28:
-                if int(pinac) == 1:
-                    pin28.value(1)
-                elif int(pinac) == 0:
-                    pin28.value(0)
-            elif int(pinno) ==  999:
-                pincontrol = False
-                print("Exiting...")
-            else:
-                print("Invalid Pin")
-            print(" ")
-    elif cmd == "pin-viewer":
-        print("Current Pin Values: ")
-        print("Pin 0" + str(pin0.value()))
-        print("Pin 1" + str(pin1.value()))
-        print("Pin 2" + str(pin2.value()))
-        print("Pin 3" + str(pin3.value()))
-        print("Pin 4" + str(pin4.value()))
-        print("Pin 5" + str(pin5.value()))
-        print("Pin 6" + str(pin6.value()))
-        print("Pin 7" + str(pin7.value()))
-        print("Pin 8" + str(pin8.value()))
-        print("Pin 9" + str(pin9.value()))
-        print("Pin 10" + str(pin10.value()))
-        print("Pin 11" + str(pin11.value()))
-        print("Pin 12" + str(pin12.value()))
-        print("Pin 13" + str(pin13.value()))
-        print("Pin 14" + str(pin14.value()))
-        print("Pin 15" + str(pin15.value()))
-        print("Pin 16" + str(pin16.value()))
-        print("Pin 17" + str(pin17.value()))
-        print("Pin 18" + str(pin18.value()))
-        print("Pin 19" + str(pin19.value()))
-        print("Pin 20" + str(pin20.value()))
-        print("Pin 21" + str(pin21.value()))
-        print("Pin 26" + str(pin26.value()))
-        print("Pin 27" + str(pin27.value()))
-        print("Pin 28" + str(pin28.value()))
         
+    
+    #INSERT APP HERE
+    
     
     
     print()
-    led.value(0)
