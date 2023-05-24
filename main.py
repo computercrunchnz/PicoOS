@@ -55,7 +55,7 @@ pin27 = Pin(27, Pin.OUT)
 pin28 = Pin(28, Pin.OUT)
 
 osversion = "2.0"
-osversionpostnote = "Alpha 6"
+osversionpostnote = "Alpha 7"
 
 print("Welcome to PicoOS!")
 print("Report any issues to computercrunchnz+picoos2@gmail.com")
