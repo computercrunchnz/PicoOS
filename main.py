@@ -55,7 +55,7 @@ pin27 = Pin(27, Pin.OUT)
 pin28 = Pin(28, Pin.OUT)
 
 osversion = "2.0"
-osversionpostnote = "Alpha 8"
+osversionpostnote = "Alpha 9"
 
 print("Welcome to PicoOS!")
 print("Report any issues to computercrunchnz+picoos2@gmail.com")
@@ -350,10 +350,6 @@ while True:
             a = a + 1
     elif cmd == "war-scenario":
         from random import randint
-
-        q = 0
-
-        nq = 1
         
         country = ["New Zealand", "Australia", "Austria", "South Africa", "You", "Russia", "Ukraine", "The United Kingdom", "France", "The United States", "India", "China", "Fiji", "Brazil", "Mexico", "Singapore", "Hong Kong", "Germany", "Poland", "Spain", "Mongolia", "Samoa", "Finland", "Ireland", "Italy", "Sweeden", "Japan", "Taiwan", "Chile", "Canada",]
 
@@ -364,16 +360,12 @@ while True:
         ctry2 = randint(0, len(country)-1)
 
             
-        tpe = randint(0, len(wartype))
+        tpe = randint(0, len(wartype)-1)
 
         print(country[ctry], wartype[tpe], country[ctry2] + ".")
 
     elif cmd == "random-sentence":
         from random import randint
-        
-        q = 0
-
-        nq = 1
         
         w = ["Ur Mum", "Ur Dad", "Computer Crunch", "Your Cat", "Your Dog", "Donald Trump", "Raspberry Pi", "Apple", "Microsoft", "Google", "Meta", ]
         
