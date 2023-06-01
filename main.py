@@ -12,20 +12,6 @@ import os
 
 from sys import version
 
-pyversion1 = version[20]
-pyversion2 = str(version[22]) + str(version[23])
-pyversion3 = version[25]
-
-if int(pyversion1) < 1:
-    print("Old Python version")
-    sys.exit()
-if int(pyversion2) < 19:
-    print("Old Python Version")
-    sys.exit()
-if int(pyversion3) < 1:
-    print("Old Python Version")
-    sys.exit()
-
 led = Pin(25, Pin.OUT)
 
 led.value(1)
@@ -40,8 +26,8 @@ led.value(1)
 
 time.sleep(0.10)
 
-osversion = "1.3"
-osversionpostnote = " "
+osversion = "1.4"
+osversionpostnote = ""
 
 print("Welcome to PicoOS!")
 print("Report any issues to computercrunchnz+picoos1@gmail.com")
@@ -61,10 +47,13 @@ while True:
         print("Made by Crunch Media Group Software LTD")
         print("This PicoPC belongs to " + name + ".")
         print("Report any issues to computercrunchnz+picoos1@gmail.com")
-        print("Micropython version: " + version)
+        print("Python version: " + version)
+        print("PicoOS 1 support ends on 11/1/2025")
     elif cmd == "update":
         print("Update")
         print("To download the latest version, go to the PicoOS git repository at https://github.com/computercrunchnz/PicoOS/.")
+        print("PicoOS 1 feature updates end on 4/9/2023")
+        print("PicoOS 1 support ends on 11/1/2025")
     elif cmd == "calculator":
         print("Calculator")
         calc = 1
@@ -613,8 +602,8 @@ while True:
                 cookies = cookies+1
     elif cmd == "quiz":
         print("Welcome to News Quiz!")
-        questions = ("When was King Charles III's Coronation? DD/MM/YYYY", "What is the 'i' in Intel Core going to be replaced with?", "Are AMD Ryzen 7000X3D chips overheating? Y/N", "What does OS Stand For", "How many subscribers does Computer Crunch have as of 12/5/2023?")
-        answers = ("06/05/2023", "Ultra", "Y", "Operating System", "97")
+        questions = ("When will PicoOS 2 be released? (DD/MM/YYYY) ", "What month is WWDC usually in?", "How old does Windows 98 turn this year?", "What does PC stand for?", "How many subscribers does Computer Crunch have as of 2/6/2023?")
+        answers = ("04/09/2023", "June", "25", "Personal Computer", "101")
         quizq = 0
         quizs = 0
         while quizq < len(questions):
@@ -630,33 +619,33 @@ while True:
     
     elif cmd == "marketshare":
         print("Welcome to Market Share!")
-        print("Latest as of 12/5/2023.")
+        print("Latest as of 2/6/2023.")
         print("From statcounter")
         sector = input("Sector: ")
         if sector == "desktop":
             print("Desktop OS Market Share")
-            print("Windows: 63.13%")
-            print("macOS: 17.78%")
-            print("Unknown: 12.5%")
-            print("Linux: 2.83%")
-            print("ChromeOS: 3.74%")
-            print("FreeBSD: 0.01%")
+            print("Windows: 61.87%")
+            print("macOS: 18.87%")
+            print("Unknown: 13.01%")
+            print("Linux: 2.69%")
+            print("ChromeOS: 3.54%")
+            print("FreeBSD: 0%")
         elif sector == "tablet":
             print("Tablet OS Market Share")
-            print("iPadOS: 54.41%")
-            print("Android: 45.38%")
-            print("Windows: 0.03%")
-            print("Linux: 0.14%")
+            print("iPadOS: 55.89%")
+            print("Android: 43.92%")
+            print("Windows: 0.02%")
+            print("Linux: 0.12%")
             print("Unknown: 0.03%")
             print("Blackberry OS: 0.01%")
         elif sector == "mobile":
             print("Mobile OS Market Share")
-            print("Android: 68.79%")
-            print("iOS: 30.44%")
-            print("Samsung: 0.42%")
-            print("KaiOS: 0.12%")
-            print("Unknown: 0.17%")
-            print("Windows: 0.03%")
+            print("Android: 67.56%")
+            print("iOS: 31.6%")
+            print("Samsung: 0.43%")
+            print("KaiOS: 0.2%")
+            print("Unknown: 0.15%")
+            print("Windows: 0.02%")
         elif sector == "pico":
             print("Raspberry Pi Pico OS Market Share")
             print("CMG PicoOS: 100%")
