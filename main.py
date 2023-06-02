@@ -55,7 +55,7 @@ pin27 = Pin(27, Pin.OUT)
 pin28 = Pin(28, Pin.OUT)
 
 osversion = "2.0"
-osversionpostnote = "Alpha 9"
+osversionpostnote = "Alpha 10"
 
 print("Welcome to PicoOS!")
 print("Report any issues to computercrunchnz+picoos2@gmail.com")
@@ -361,17 +361,19 @@ while True:
 
             
         tpe = randint(0, len(wartype)-1)
+        
+        print("DISCLAIMER: THIS IS FICTIONAL - DO NOT TAKE IT AS BEING REAL")
 
         print(country[ctry], wartype[tpe], country[ctry2] + ".")
 
     elif cmd == "random-sentence":
         from random import randint
         
-        w = ["Ur Mum", "Ur Dad", "Computer Crunch", "Your Cat", "Your Dog", "Donald Trump", "Raspberry Pi", "Apple", "Microsoft", "Google", "Meta", ]
+        w = ["Ur Mum", "Ur Dad", "Computer Crunch", "Your Cat", "Your Dog", "Donald Trump", "Raspberry Pi", "Apple", "Microsoft", "Google", "Meta", "Your friend", "Your teacher", ]
         
-        w2 = ["did", "is doing", "saw", "calculated", "is on planet", "fixed", "created", "helped", "is in", "started up", "typed", "is a", "is", "is on the", ]
+        w2 = ["did", "is doing", "saw", "calculated", "is on planet", "fixed", "created", "helped", "is in", "started up", "typed", "is a", "is", "is on the", "ate", ]
         
-        w3 = ["YouTube", "Earth", "Ur Mum", "Ur Dad", "Ur Cat", "Your Computer", "grass", "mars", "macOS", "faliure", "poem", "maintenance", "piano", "disaster", "customer", "software", "stranger", "bird", "guest", "orange", "spray tan", "guitar", "Interislander", "bad", "good", "Bluebridge", "train", "bus", "plane",]
+        w3 = ["YouTube", "Earth", "Ur Mum", "Ur Dad", "Ur Cat", "Your Computer", "grass", "mars", "macOS", "failure", "poem", "maintenance", "piano", "disaster", "customer", "software", "stranger", "bird", "guest", "orange", "spray tan", "guitar", "Interislander", "bad", "good", "Bluebridge", "train", "bus", "plane",]
         
         
 
