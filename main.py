@@ -26,7 +26,7 @@ led.value(1)
 
 time.sleep(0.10)
 
-osversion = "1.4"
+osversion = "1.4.1"
 osversionpostnote = ""
 
 print("Welcome to PicoOS!")
@@ -225,7 +225,7 @@ while True:
             print("1. Enter Writer")
             print("2. Choose a file name with an extension (example - hi.txt)")
             print("3. Write the contents of the file")
-        elif hs == "writer":
+        elif hs == "reader":
             print("Reader Help")
             print("HOW TO USE:")
             print("1. Enter Reader")
