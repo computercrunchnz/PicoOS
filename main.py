@@ -55,7 +55,7 @@ pin27 = Pin(27, Pin.OUT)
 pin28 = Pin(28, Pin.OUT)
 
 osversion = "2.0"
-osversionpostnote = "Alpha 10"
+osversionpostnote = "Alpha 11"
 
 print("Welcome to PicoOS!")
 print("Report any issues to computercrunchnz+picoos2@gmail.com")
@@ -179,8 +179,8 @@ while True:
         print("'random-sentence' - A random sentence generator")
         print("'temp' - Check the temperature in celcius")
         print("'clicker' - Cookie Clicker")
-        print("'marketshare' - OS Market Share (real time stock values coming soon)")
-        print("'quiz' - News Quiz")
+        print("'market-share' - OS Market Share (real time stock values coming soon)")
+        print("'news-quiz' - News Quiz")
         print("'time' - Tells the time and date")
         print("'ls' - Lists the files")
         print("'del' - Delete a file")
@@ -194,7 +194,7 @@ while True:
         hs = input("Do you need commands for in an app? ")
         if hs == "no":
             print("Okay")
-        elif hs == "marketshare":
+        elif hs == "market-share":
             print("Market Share Help")
             print("SECTORS:")
             print("'desktop' - Desktop OS Market Share")
@@ -224,7 +224,7 @@ while True:
             print("1. Enter Writer")
             print("2. Choose a file name with an extension (example - hi.txt)")
             print("3. Write the contents of the file")
-        elif hs == "writer":
+        elif hs == "reader":
             print("Reader Help")
             print("HOW TO USE:")
             print("1. Enter Reader")
@@ -431,10 +431,10 @@ while True:
             elif clickput == "":
                 print("COOKIE!")
                 cookies = cookies+1
-    elif cmd == "quiz":
+    elif cmd == "news-quiz":
         print("Welcome to News Quiz!")
-        questions = ("When was King Charles III's Coronation? DD/MM/YYYY", "What is the 'i' in Intel Core going to be replaced with?", "Are AMD Ryzen 7000X3D chips overheating? Y/N", "What does OS Stand For", "How many subscribers does Computer Crunch have as of 12/5/2023?")
-        answers = ("06/05/2023", "Ultra", "Y", "Operating System", "97")
+        questions = ("When will PicoOS 2 be released? (DD/MM/YYYY) ", "What month is WWDC usually in?", "How old does Windows 98 turn this year?", "What does PC stand for?", "How many subscribers does Computer Crunch have as of 2/6/2023?")
+        answers = ("04/09/2023", "June", "25", "Personal Computer", "101")
         quizq = 0
         quizs = 0
         while quizq < len(questions):
@@ -448,35 +448,35 @@ while True:
             quizq = quizq+1
         print("Score: " + str(quizs) + " out of " + str(len(questions)) + ".")
     
-    elif cmd == "marketshare":
+    elif cmd == "market-share":
         print("Welcome to Market Share!")
-        print("Latest as of 12/5/2023.")
+        print("Latest as of 2/6/2023.")
         print("From statcounter")
         sector = input("Sector: ")
         if sector == "desktop":
             print("Desktop OS Market Share")
-            print("Windows: 63.13%")
-            print("macOS: 17.78%")
-            print("Unknown: 12.5%")
-            print("Linux: 2.83%")
-            print("ChromeOS: 3.74%")
-            print("FreeBSD: 0.01%")
+            print("Windows: 61.87%")
+            print("macOS: 18.87%")
+            print("Unknown: 13.01%")
+            print("Linux: 2.69%")
+            print("ChromeOS: 3.54%")
+            print("FreeBSD: 0%")
         elif sector == "tablet":
             print("Tablet OS Market Share")
-            print("iPadOS: 54.41%")
-            print("Android: 45.38%")
-            print("Windows: 0.03%")
-            print("Linux: 0.14%")
+            print("iPadOS: 55.89%")
+            print("Android: 43.92%")
+            print("Windows: 0.02%")
+            print("Linux: 0.12%")
             print("Unknown: 0.03%")
             print("Blackberry OS: 0.01%")
         elif sector == "mobile":
             print("Mobile OS Market Share")
-            print("Android: 68.79%")
-            print("iOS: 30.44%")
-            print("Samsung: 0.42%")
-            print("KaiOS: 0.12%")
-            print("Unknown: 0.17%")
-            print("Windows: 0.03%")
+            print("Android: 67.56%")
+            print("iOS: 31.6%")
+            print("Samsung: 0.43%")
+            print("KaiOS: 0.2%")
+            print("Unknown: 0.15%")
+            print("Windows: 0.02%")
         elif sector == "pico":
             print("Raspberry Pi Pico OS Market Share")
             print("CMG PicoOS: 100%")
