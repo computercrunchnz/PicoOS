@@ -1,4 +1,4 @@
-print("PicoOS 1 Setup")
+print("PicoOS 2 Setup")
 namefile = open("name.txt", "w")
 name = input("Name: ")
 
