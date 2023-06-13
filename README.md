@@ -7,8 +7,9 @@ Boards with the RP2040 processor and Micropython.
 # Support Lifecycle
 Each full release of PicoOS (1.x 2.x etc) gets 2 years of updates from the release date.
 
-PicoOS 1 End of Feature Updates: 4/9/2023
-PicoOS 1 End Of Support: 11/1/2025
+PicoOS 2 Release Date: 4/9/2023
+PicoOS 2 End of Feature Updates: 3/9/2024
+PicoOS 2 End Of Support / Bug Fixes: 4/9/2025
 
 # Setup 1 - For Windows, macOS and Linux to add files to the RP2040 Board.
 1) Download and Install Thonny ```wget -O thonny-latest.sh https://thonny.org/installer-for-linux``` (example for Linux).
@@ -18,10 +19,11 @@ PicoOS 1 End Of Support: 11/1/2025
 5) At the Right-Hand side on the bottom there should be a line saying what interprepter you are in.
 6) Click that and choose MicroPython Raspberry Pi Pico.
 7) If you don't have MicroPython installed on your Pico or RP2040 board, Thonny will ask if you want to install MicroPython. Click install and it may take a few minutes to install MicroPython.
-8) Now open **main.py, setup.py, name.txt and smartlight.py** from the git folder and **save it to the Pico or RP2040 board**.
-9) Once that is done run main.py.
-10) Type in the ```setup``` command in PicoOS to change the name of the Pico or RP2040 board.
-11) Type in the ```help``` command for a list of all commands.
+8) Now open **main.py and setup.py** from the git folder and **save it to the Pico or RP2040 board**.
+9) Once that is done run in the python terminal ```import setup``` to enter the setup program.
+10) Once that is done run ```import main```.
+11) Type in the ```setup``` command in PicoOS to change the name of the Pico or RP2040 board.
+12) Type in the ```help``` command for a list of all commands.
 
 # Setup 2 - For use on Linux.
 1) If you have not put PicoOS on your Pico or RP2040 board, please refer to Setup 1 before this.
@@ -54,7 +56,7 @@ PicoOS 1 End Of Support: 11/1/2025
 2) Clone this Repository ```git clone https://github.com/computercrunchnz/PicoOS.git``` (example for Linux). 
 3) Enter Thonny.
 5) At the Right-Hand side on the bottom there should be a line saying what interprepter you are in.
-6) Now open **main.py, setup.py, name.txt and smartlight.py** from the git folder and **save it to the Pico or RP2040 board**.
+6) Now open **main.py and setup.py** from the git folder and **save it to the Pico or RP2040 board**.
 7) Once that is done run main.py.
 10) Type in the ```setup``` command in PicoOS to change the name of the Pico or RP2040 board.
 11) Type in the ```help``` command for a list of all commands.
