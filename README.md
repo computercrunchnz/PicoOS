@@ -1,13 +1,13 @@
-# PicoOS 1 SDK
-An OS for boards with the RP2040 Processor, Currently Under Development, features are subject to change.
+# PicoOS 2 SDK
+An SDK that runs on PCs for PicoOS 2
 
 # Compatibility
-Linux, macOS and Windows
+Linux, macOS and Windows with Python 3
 
 # Setup 1 - For Windows, macOS and Linux..
 1) Download and Install Thonny ```wget -O thonny-latest.sh https://thonny.org/installer-for-linux``` (example for Linux).
 2) Connect the Pico or RP2040 board to your computer.
-3) Clone this Repository ```git clone https://github.com/computercrunchnz/PicoOS.git``` (example for Linux). 
+3) Download this tree of the repository. 
 4) Once Thonny and PicoOS is downloaded enter Thonny.
 5) At the Right-Hand side on the bottom there should be a line saying what interprepter you are in.
 6) Click that and choose Python 3 Interpereter
