@@ -26,7 +26,7 @@ led.value(1)
 
 time.sleep(0.10)
 
-osversion = "1.4.1"
+osversion = "1.5"
 osversionpostnote = ""
 
 print("Welcome to PicoOS!")
@@ -624,27 +624,27 @@ while True:
         sector = input("Sector: ")
         if sector == "desktop":
             print("Desktop OS Market Share")
-            print("Windows: 61.87%")
-            print("macOS: 18.87%")
-            print("Unknown: 13.01%")
-            print("Linux: 2.69%")
-            print("ChromeOS: 3.54%")
-            print("FreeBSD: 0%")
+            print("Windows: 68.15%")
+            print("macOS: 21.38)
+            print("Unknown: 3.23%")
+            print("Linux: 3.08%")
+            print("ChromeOS: 4.15%")
+            print("FreeBSD: 0.01%")
         elif sector == "tablet":
             print("Tablet OS Market Share")
-            print("iPadOS: 55.89%")
-            print("Android: 43.92%")
+            print("iPadOS: 53.55%")
+            print("Android: 46.27%")
             print("Windows: 0.02%")
             print("Linux: 0.12%")
             print("Unknown: 0.03%")
             print("Blackberry OS: 0.01%")
         elif sector == "mobile":
             print("Mobile OS Market Share")
-            print("Android: 67.56%")
-            print("iOS: 31.6%")
-            print("Samsung: 0.43%")
-            print("KaiOS: 0.2%")
-            print("Unknown: 0.15%")
+            print("Android: 70.79%")
+            print("iOS: 28.44%")
+            print("Samsung: 0.38%")
+            print("KaiOS: 0.18%")
+            print("Unknown: 0.14%")
             print("Windows: 0.02%")
         elif sector == "pico":
             print("Raspberry Pi Pico OS Market Share")
