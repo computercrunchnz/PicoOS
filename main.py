@@ -625,7 +625,7 @@ while True:
         if sector == "desktop":
             print("Desktop OS Market Share")
             print("Windows: 68.15%")
-            print("macOS: 21.38")
+            print("macOS: 21.38%")
             print("Unknown: 3.23%")
             print("Linux: 3.08%")
             print("ChromeOS: 4.15%")
