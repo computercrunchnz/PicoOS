@@ -26,7 +26,7 @@ led.value(1)
 
 time.sleep(0.10)
 
-osversion = "1.5"
+osversion = "1.5.1"
 osversionpostnote = ""
 
 print("Welcome to PicoOS!")
