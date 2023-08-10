@@ -26,12 +26,13 @@ led.value(1)
 
 time.sleep(0.10)
 
-osversion = "1.5.1"
+osversion = "1.6"
 osversionpostnote = ""
 
 print("Welcome to PicoOS!")
 print("Report any issues to computercrunchnz+picoos1@gmail.com")
 print("Version: " + str(osversion) + " " + str(osversionpostnote))
+print("From 4/9/2023 onwards, PicoOS 1 will not recieve any feature updates. Features like market-share and news-quiz will be updated with the latest data and questions.")
 
 namefile = open("name.txt", "r")
 name = namefile.read()
@@ -602,8 +603,8 @@ while True:
                 cookies = cookies+1
     elif cmd == "quiz":
         print("Welcome to News Quiz!")
-        questions = ("When will PicoOS 2 be released? (DD/MM/YYYY) ", "What month is WWDC usually in?", "How old does Windows 98 turn this year?", "What does PC stand for?", "How many subscribers does Computer Crunch have as of 2/6/2023?")
-        answers = ("04/09/2023", "June", "25", "Personal Computer", "101")
+        questions = ("When will PicoOS 2 be released? (DD/MM/YYYY) ", "How many videos does Computer Crunch release per week?", "How old is Windows 10?", "What does RAM stand for?", "How many subscribers does Computer Crunch have as of 11/8/2023?")
+        answers = ("04/09/2023", "2", "8", "Random Access Memory", "123")
         quizq = 0
         quizs = 0
         while quizq < len(questions):
@@ -619,32 +620,32 @@ while True:
     
     elif cmd == "marketshare":
         print("Welcome to Market Share!")
-        print("Latest as of 2/6/2023.")
+        print("Latest as of 11/8/2023.")
         print("From statcounter")
         sector = input("Sector: ")
         if sector == "desktop":
             print("Desktop OS Market Share")
-            print("Windows: 68.15%")
-            print("macOS: 21.38%")
-            print("Unknown: 3.23%")
-            print("Linux: 3.08%")
-            print("ChromeOS: 4.15%")
+            print("Windows: 69.51%")
+            print("macOS: 20.43%")
+            print("Unknown: 3.69%")
+            print("Linux: 3.13%")
+            print("ChromeOS: 3.24%")
             print("FreeBSD: 0.01%")
         elif sector == "tablet":
             print("Tablet OS Market Share")
-            print("iPadOS: 53.55%")
-            print("Android: 46.27%")
+            print("iPadOS: 54.87%")
+            print("Android: 44.96%")
             print("Windows: 0.02%")
-            print("Linux: 0.12%")
+            print("Linux: 0.09%")
             print("Unknown: 0.03%")
-            print("Blackberry OS: 0.01%")
+            print("Blackberry OS: 0.02%")
         elif sector == "mobile":
             print("Mobile OS Market Share")
-            print("Android: 70.79%")
-            print("iOS: 28.44%")
+            print("Android: 70.9%")
+            print("iOS: 28.36%")
             print("Samsung: 0.38%")
-            print("KaiOS: 0.18%")
-            print("Unknown: 0.14%")
+            print("KaiOS: 0.15%")
+            print("Unknown: 0.15%")
             print("Windows: 0.02%")
         elif sector == "pico":
             print("Raspberry Pi Pico OS Market Share")
