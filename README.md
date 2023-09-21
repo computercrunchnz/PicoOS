@@ -5,9 +5,10 @@ An OS for boards with the RP2040 Processor.
 Boards with the RP2040 processor and Micropython.
 
 # Support Lifecycle
-Each full release of PicoOS (1.x 2.x etc) gets 2 years of updates from the release date.
+Each full release of PicoOS (1.x 2.x etc) gets 2 years of support from the release date.
 
-PicoOS 1 End of Feature Updates: 4/9/2023
+PicoOS 1 Feature Updates have ended.
+
 PicoOS 1 End Of Support: 11/1/2025
 
 # Setup 1 - For Windows, macOS and Linux to add files to the RP2040 Board.
