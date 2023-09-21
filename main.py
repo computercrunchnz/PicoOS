@@ -32,7 +32,7 @@ osversionpostnote = ""
 print("Welcome to PicoOS!")
 print("Report any issues to computercrunchnz+picoos1@gmail.com")
 print("Version: " + str(osversion) + " " + str(osversionpostnote))
-print("PicoOS 1 is no longer receiving feature updates. Features like market-share and news-quiz will be updated with the latest data and questions.")
+print("PicoOS 1 is no longer receiving feature updates, only bug fixes until 11/1/2025.")
 
 namefile = open("name.txt", "r")
 name = namefile.read()
