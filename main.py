@@ -26,13 +26,13 @@ led.value(1)
 
 time.sleep(0.10)
 
-osversion = "1.6"
+osversion = "1.7"
 osversionpostnote = ""
 
 print("Welcome to PicoOS!")
 print("Report any issues to computercrunchnz+picoos1@gmail.com")
 print("Version: " + str(osversion) + " " + str(osversionpostnote))
-print("From 4/9/2023 onwards, PicoOS 1 will not recieve any feature updates. Features like market-share and news-quiz will be updated with the latest data and questions.")
+print("PicoOS 1 is no longer receiving feature updates. Features like market-share and news-quiz will be updated with the latest data and questions.")
 
 namefile = open("name.txt", "r")
 name = namefile.read()
@@ -53,7 +53,7 @@ while True:
     elif cmd == "update":
         print("Update")
         print("To download the latest version, go to the PicoOS git repository at https://github.com/computercrunchnz/PicoOS/.")
-        print("PicoOS 1 feature updates end on 4/9/2023")
+        print("PicoOS 1 feature updates have ended.")
         print("PicoOS 1 support ends on 11/1/2025")
     elif cmd == "calculator":
         print("Calculator")
@@ -603,8 +603,8 @@ while True:
                 cookies = cookies+1
     elif cmd == "quiz":
         print("Welcome to News Quiz!")
-        questions = ("When will PicoOS 2 be released? (DD/MM/YYYY) ", "How many videos does Computer Crunch release per week?", "How old is Windows 10?", "What does RAM stand for?", "How many subscribers does Computer Crunch have as of 11/8/2023?")
-        answers = ("04/09/2023", "2", "8", "Random Access Memory", "123")
+        questions = ("When is the 2023 NZ Election (DD/MM/YYYY) ", "How many videos does Crunch TV & Radio Archives release per week?", "How old is Windows 11?", "What does PSU stand for?", "How many subscribers does Computer Crunch have as of 21/9/2023?")
+        answers = ("14/10/2023", "35", "2", "Power Supply Unit", "127")
         quizq = 0
         quizs = 0
         while quizq < len(questions):
@@ -620,32 +620,32 @@ while True:
     
     elif cmd == "marketshare":
         print("Welcome to Market Share!")
-        print("Latest as of 11/8/2023.")
+        print("Latest as of 21/9/2023.")
         print("From statcounter")
         sector = input("Sector: ")
         if sector == "desktop":
             print("Desktop OS Market Share")
-            print("Windows: 69.51%")
-            print("macOS: 20.43%")
-            print("Unknown: 3.69%")
-            print("Linux: 3.13%")
-            print("ChromeOS: 3.24%")
+            print("Windows: 69.27%")
+            print("macOS: 20.19%")
+            print("Unknown: 4.02%")
+            print("Linux: 3.19%")
+            print("ChromeOS: 3.32%")
             print("FreeBSD: 0.01%")
         elif sector == "tablet":
             print("Tablet OS Market Share")
-            print("iPadOS: 54.87%")
-            print("Android: 44.96%")
+            print("iPadOS: 54.68%")
+            print("Android: 45.11%")
             print("Windows: 0.02%")
-            print("Linux: 0.09%")
-            print("Unknown: 0.03%")
-            print("Blackberry OS: 0.02%")
+            print("Linux: 0.13%")
+            print("Unknown: 0.04%")
+            print("Blackberry OS: 0.03%")
         elif sector == "mobile":
             print("Mobile OS Market Share")
-            print("Android: 70.9%")
-            print("iOS: 28.36%")
-            print("Samsung: 0.38%")
-            print("KaiOS: 0.15%")
-            print("Unknown: 0.15%")
+            print("Android: 70.77%")
+            print("iOS: 28.52%")
+            print("Samsung: 0.37%")
+            print("KaiOS: 0.1%")
+            print("Unknown: 0.17%")
             print("Windows: 0.02%")
         elif sector == "pico":
             print("Raspberry Pi Pico OS Market Share")
