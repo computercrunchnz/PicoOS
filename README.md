@@ -1,5 +1,5 @@
 # PicoOS
-An OS for boards with the RP2040 Processor.
+An OS for boards with the RP2040 Processor. No longer being worked on.
 
 # Compatibility
 Boards with the RP2040 processor and Micropython.
